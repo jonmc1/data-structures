@@ -61,7 +61,9 @@ int main(int argc, char *argv[]) {
 		} else if (strcmp(op, "help") == 0) {
 			printf(help_message);
 		} else if (strcmp(op, "exit") == 0 || strcmp(op, "quit") == 0) {
-			printf("\nExiting...\n");
+			printf("\nDeleting linked list ...\n");
+			ll_delete(list_head);
+			printf("\nDone. Exiting ...\n");
 			break;
 		} else {
 			printf("\nUnknown operation: %s\n\n", op);
@@ -167,4 +169,13 @@ int ll_get_length(ll_item_t* list_head) {
 		list_item = list_item->next;
 	}
 	return length;
+}
+
+void ll_delete(ll_item_t* list_head) {
+	ll_item_t* list_item = list_head;
+	while (list_item != NULL) {
+		ll_item_t* next_item = list_item->next;
+		free(list_item);
+		list_item = next_item;
+	}
 }

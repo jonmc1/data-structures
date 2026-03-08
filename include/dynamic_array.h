@@ -42,4 +42,9 @@ void da_traverse(dynamic_array_t* array, void (*func)(int));
  */
 void da_print(dynamic_array_t* array);
 
+/**
+ * Delete the dynamic array
+ */
+void da_delete(dynamic_array_t* array);
+
 #endif // DYNAMIC_ARRAY_H

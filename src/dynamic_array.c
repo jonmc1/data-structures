@@ -44,7 +44,9 @@ int main(int argc, char *argv[]) {
 		} else if (strcmp(op, "help") == 0) {
 			printf(help_message);
 		} else if (strcmp(op, "exit") == 0 || strcmp(op, "quit") == 0) {
-			printf("\nExiting...\n");
+			printf("\nDeleting dynamic array ...\n");
+			da_delete(array);
+			printf("\nDone. Exiting ...\n");
 			break;
 		} else {
 			printf("\nUnknown operation: %s\n\n", op);
@@ -105,4 +107,9 @@ void da_print(dynamic_array_t* array) {
 	printf("\nValues: \n");
 	da_traverse(array, print_value);
 	printf("\n");
+}
+
+void da_delete(dynamic_array_t* array) {
+	free(array->data);
+	free(array);
 }

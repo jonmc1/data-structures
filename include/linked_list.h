@@ -49,4 +49,9 @@ void ll_print(ll_item_t* list_head);
  */
 int ll_get_length(ll_item_t* list_head);
 
+/**
+ * Delete the linked list
+ */
+void ll_delete(ll_item_t* list_head);
+
 #endif // LINKED_LIST_H
