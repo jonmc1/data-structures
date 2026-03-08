@@ -1,3 +1,6 @@
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
+
 /**
  * Linked List Item
  */
@@ -45,3 +48,5 @@ void ll_print(ll_item_t* list_head);
  * Get the length of the list
  */
 int ll_get_length(ll_item_t* list_head);
+
+#endif // LINKED_LIST_H

@@ -1,3 +1,6 @@
+#ifndef DYNAMIC_ARRAY_H
+#define DYNAMIC_ARRAY_H
+
 /**
  * Dynamic Array
  */
@@ -38,3 +41,5 @@ void da_traverse(dynamic_array_t* array, void (*func)(int));
  * Print the dynamic array
  */
 void da_print(dynamic_array_t* array);
+
+#endif // DYNAMIC_ARRAY_H

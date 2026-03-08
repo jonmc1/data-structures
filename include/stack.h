@@ -1,8 +1,11 @@
-#ifndef stack_h
-#define stack_h
+#ifndef STACK_H
+#define STACK_H
 
 #include <stdbool.h>
 
+/**
+ * Stack
+ */
 typedef struct stack
 {
 	int *elements;
@@ -50,4 +53,4 @@ void stack_delete(the_stack *stack);
  */
 void stack_print(the_stack *stack);
 
-#endif // stack_h
+#endif // STACK_H
