@@ -6,3 +6,6 @@ linked-list : src/linked_list.c
 
 stack : src/stack.c
 	gcc -o bin/stack -Wall src/stack.c
+
+queue : src/queue.c
+	gcc -o bin/queue -Wall src/queue.c
